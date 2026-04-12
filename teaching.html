@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching — Bruno Pantaleão</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.teaching-list { display: flex; flex-direction: column; }
+.teaching-item {
+  border-top: 1px solid var(--rule);
+  padding: 1.8rem 0;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.teaching-item:last-child { border-bottom: 1px solid var(--rule); }
+.teaching-inst {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--ink-faint); padding-top: 3px;
+}
+.teaching-course {
+  font-family: var(--serif); font-size: 1.02rem;
+  font-weight: 400; line-height: 1.45; color: var(--ink);
+  margin-bottom: 0.3rem;
+}
+.teaching-level {
+  font-size: 12.5px; color: var(--ink-faint); font-style: italic;
+}
+@media (max-width: 500px) {
+  .teaching-item { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Bruno Pantaleão</a>
+  <ul class="nav-links">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="ongoing.html">On-going</a></li>
+    <li><a href="policy.html">Policy</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="teaching.html" class="active">Teaching</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <p class="sub">Courses &amp; seminars</p>
+    <h1>Teaching</h1>
+  </div>
+
+  <div class="teaching-list">
+
+    <div class="teaching-item">
+      <span class="teaching-inst">FGV-RI</span>
+      <div>
+        <p class="teaching-course">International Development</p>
+        <p class="teaching-level">Undergraduate</p>
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <span class="teaching-inst">FGV-RI</span>
+      <div>
+        <p class="teaching-course">Undergraduate Thesis Seminar 1 &amp; 2</p>
+        <p class="teaching-level">Undergraduate · Dissertation supervision</p>
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <span class="teaching-inst">FGV-RI</span>
+      <div>
+        <p class="teaching-course">Crime, Governance, and Development</p>
+        <p class="teaching-level">Undergraduate · Elective</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>Bruno Pantaleão · FGV Analytics, São Paulo · <a href="mailto:bruno.pantaleao@fgv.br" style="color:var(--ink-faint);text-decoration:none;">bruno.pantaleao@fgv.br</a></footer>
+</body>
+</html>

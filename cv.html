@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Bruno Pantaleão</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.cv-actions {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 3rem;
+}
+.cv-download {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px;
+  background: var(--ink); color: var(--paper);
+  text-decoration: none; font-size: 14px; font-weight: 400;
+  border-radius: 2px; letter-spacing: 0.03em;
+  transition: background 0.18s;
+}
+.cv-download:hover { background: var(--accent); }
+.cv-download svg { width: 16px; height: 16px; }
+
+.cv-section { margin-bottom: 3.5rem; }
+.cv-section h2 {
+  font-family: var(--serif); font-size: 0.9rem; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 1.2rem;
+  border-top: 1px solid var(--rule); padding-top: 1rem;
+}
+.cv-row {
+  display: grid; grid-template-columns: 120px 1fr;
+  gap: 1.5rem; margin-bottom: 1.4rem; align-items: start;
+}
+.cv-year { font-size: 13px; color: var(--ink-faint); padding-top: 2px; }
+.cv-entry-title {
+  font-family: var(--serif); font-size: 0.98rem;
+  font-weight: 400; color: var(--ink); margin-bottom: 0.2rem;
+}
+.cv-entry-sub { font-size: 13px; color: var(--ink-muted); font-style: italic; }
+.cv-entry-detail { font-size: 13px; color: var(--ink-faint); margin-top: 0.2rem; }
+
+@media (max-width: 500px) {
+  .cv-row { grid-template-columns: 1fr; gap: 0.2rem; }
+  .cv-year { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Bruno Pantaleão</a>
+  <ul class="nav-links">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="ongoing.html">On-going</a></li>
+    <li><a href="policy.html">Policy</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="cv.html" class="active">CV</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <p class="sub">Curriculum vitae</p>
+    <h1>CV</h1>
+  </div>
+
+  <div class="cv-actions">
+    <a class="cv-download" href="CV_bruno_pantaleao.pdf" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
+      </svg>
+      Download PDF
+    </a>
+  </div>
+
+  <div class="cv-section">
+    <h2>Current Position</h2>
+    <div class="cv-row">
+      <span class="cv-year">2024–</span>
+      <div>
+        <p class="cv-entry-title">FAPESP Postdoctoral Fellow</p>
+        <p class="cv-entry-sub">FGV Analytics — Analytics and Public Security Policies Research Center, São Paulo</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Education</h2>
+    <div class="cv-row">
+      <span class="cv-year">2024</span>
+      <div>
+        <p class="cv-entry-title">PhD in Business Administration</p>
+        <p class="cv-entry-sub">FGV-EAESP — São Paulo School of Business Administration</p>
+        <p class="cv-entry-detail">Committee: Ciro Biderman (chair), Gabriel Feltran, Joana Monteiro, Jessie Trudeau</p>
+        <p class="cv-entry-detail">Dissertation: <em>Descanse o seu gatilho: illegal markets' hegemony and its peace dividends</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Selected Publications</h2>
+    <div class="cv-row">
+      <span class="cv-year">2025</span>
+      <div>
+        <p class="cv-entry-title">Peace Dividends: Criminal Governance, Rational Violence, and Economic Development</p>
+        <p class="cv-entry-sub">American Political Science Review</p>
+      </div>
+    </div>
+    <div class="cv-row">
+      <span class="cv-year">2026</span>
+      <div>
+        <p class="cv-entry-title">Improving Police Management Boosts Economic Development: Evidence from Brazil</p>
+        <p class="cv-entry-sub">World Development (forthcoming)</p>
+      </div>
+    </div>
+    <div class="cv-row">
+      <span class="cv-year">2025</span>
+      <div>
+        <p class="cv-entry-title">Police Autonomy, Data-Driven Strategies, and Violence: Evidence from Brazil's Policing Reform</p>
+        <p class="cv-entry-sub">Journal of Development Economics · With Kopittke &amp; Parfitt</p>
+      </div>
+    </div>
+    <div class="cv-row">
+      <span class="cv-year">2025</span>
+      <div>
+        <p class="cv-entry-title">When Elections Empower Crime: Political Protection and Milícia Expansion in Rio de Janeiro</p>
+        <p class="cv-entry-sub">Latin American Politics and Society · With Montini</p>
+      </div>
+    </div>
+    <div class="cv-row">
+      <span class="cv-year">2025</span>
+      <div>
+        <p class="cv-entry-title">The Cross-Border Spillover Effects of Cannabis Regulation in South America</p>
+        <p class="cv-entry-sub">Journal of Quantitative Criminology · With de Assis, di Pietra &amp; Parfitt</p>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-faint);margin-top:0.5rem;"><a href="research.html" style="color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">See full list of publications →</a></p>
+  </div>
+
+  <div class="cv-section">
+    <h2>Teaching</h2>
+    <div class="cv-row">
+      <span class="cv-year">Current</span>
+      <div>
+        <p class="cv-entry-title">International Development; Undergraduate Thesis Seminar 1 &amp; 2; Crime, Governance, and Development</p>
+        <p class="cv-entry-sub">FGV-RI</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Links</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <a class="link-pill" href="https://scholar.google.fr/citations?user=aN9Eio4AAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a class="link-pill" href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=6332960" target="_blank">SSRN</a>
+      <a class="link-pill" href="https://orcid.org/0000-0002-9605-2483" target="_blank">ORCID</a>
+      <a class="link-pill" href="http://lattes.cnpq.br/6629468562676391" target="_blank">Lattes</a>
+      <a class="link-pill" href="https://analytics.fgv.br/node/213" target="_blank">FGV Analytics</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>Bruno Pantaleão · FGV Analytics, São Paulo · <a href="mailto:bruno.pantaleao@fgv.br" style="color:var(--ink-faint);text-decoration:none;">bruno.pantaleao@fgv.br</a></footer>
+</body>
+</html>

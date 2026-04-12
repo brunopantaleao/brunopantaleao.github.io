@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media — Bruno Pantaleão</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.media-list { display: flex; flex-direction: column; }
+.media-item {
+  border-top: 1px solid var(--rule);
+  padding: 1.6rem 0;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.media-item:last-child { border-bottom: 1px solid var(--rule); }
+.media-date {
+  font-size: 12px; color: var(--ink-faint);
+  letter-spacing: 0.04em; padding-top: 3px;
+  white-space: nowrap;
+}
+.media-outlet {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.35rem;
+}
+.media-title {
+  font-family: var(--serif); font-size: 1rem;
+  font-weight: 400; line-height: 1.45; color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.media-title a {
+  color: inherit; text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.2s;
+}
+.media-title a:hover { border-color: var(--accent); }
+.media-type {
+  display: inline-block; font-size: 11px;
+  padding: 2px 8px; border: 1px solid var(--rule);
+  border-radius: 2px; color: var(--ink-faint);
+  margin-right: 6px; margin-bottom: 4px;
+}
+@media (max-width: 500px) {
+  .media-item { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Bruno Pantaleão</a>
+  <ul class="nav-links">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="ongoing.html">On-going</a></li>
+    <li><a href="policy.html">Policy</a></li>
+    <li><a href="media.html" class="active">Media</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <p class="sub">Press &amp; public writing</p>
+    <h1>Media</h1>
+  </div>
+
+  <div class="media-list">
+
+    <div class="media-item">
+      <span class="media-date">5 Apr 2026</span>
+      <div>
+        <p class="media-outlet">Estadão</p>
+        <p class="media-title"><a href="https://www.estadao.com.br/opiniao/sem-seguranca-nao-ha-crescimento/" target="_blank">Sem Segurança não Há Crescimento</a></p>
+        <span class="media-type">Editorial</span>
+      </div>
+    </div>
+
+    <div class="media-item">
+      <span class="media-date">5 Apr 2026</span>
+      <div>
+        <p class="media-outlet">Valor Econômico</p>
+        <p class="media-title">
+          <a href="https://valor.globo.com/brasil/noticia/2026/03/16/economia-reage-com-melhora-em-indices-de-violencia-aponta-estudo.ghtml" target="_blank">Economia reage com melhora em índices de violência, aponta estudo</a>
+        </p>
+        <span class="media-type">Reportagem</span>
+        <a class="link-pill" href="https://valorinternacional.globo.com/economy/news/2026/03/17/violence-decline-boosts-economic-indicators-study-shows.ghtml" target="_blank" style="font-size:11px;padding:2px 8px;">English version</a>
+      </div>
+    </div>
+
+    <div class="media-item">
+      <span class="media-date">17 Mar 2026</span>
+      <div>
+        <p class="media-outlet">O Globo</p>
+        <p class="media-title"><a href="https://oglobo.globo.com/opiniao/editorial/coluna/2026/03/politicas-eficazes-contra-violencia-tem-efeito-positivo-na-economia.ghtml" target="_blank">Políticas eficazes contra violência têm efeito positivo na economia</a></p>
+        <span class="media-type">Editorial</span>
+      </div>
+    </div>
+
+    <div class="media-item">
+      <span class="media-date">23 Sep 2025</span>
+      <div>
+        <p class="media-outlet">Ponte Jornalismo</p>
+        <p class="media-title"><a href="https://ponte.org/acoes-policiais-no-ms-tem-baixas-apreensoes-de-drogas-e-pouca-eficiencia-diz-estudo/" target="_blank">Ações policiais no MS têm baixas apreensões de drogas e pouca eficiência, diz estudo</a></p>
+        <span class="media-type">Reportagem</span>
+      </div>
+    </div>
+
+    <div class="media-item">
+      <span class="media-date">20 Jan 2025</span>
+      <div>
+        <p class="media-outlet">Jornal GGN</p>
+        <p class="media-title"><a href="https://jornalggn.com.br/coluna-economica/xadrez-de-como-o-pcc-substitui-o-estado-por-luis-nassif/" target="_blank">Xadrez de como o PCC substitui o Estado, e o Estado invade o mercado de drogas</a></p>
+        <span class="media-type">Reportagem</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>Bruno Pantaleão · FGV Analytics, São Paulo · <a href="mailto:bruno.pantaleao@fgv.br" style="color:var(--ink-faint);text-decoration:none;">bruno.pantaleao@fgv.br</a></footer>
+</body>
+</html>

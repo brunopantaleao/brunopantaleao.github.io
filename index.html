@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bruno Pantaleão — Researcher</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5.5rem 2rem 5rem;
+  align-items: start;
+}
+.hero-eyebrow {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.2rem;
+}
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15;
+  letter-spacing: -0.01em; margin-bottom: 1.8rem;
+}
+h1 em { font-style: italic; color: var(--accent); }
+.hero-bio {
+  font-size: 16.5px; line-height: 1.78;
+  color: var(--ink-muted); max-width: 520px; margin-bottom: 0.6rem;
+}
+.hero-bio strong { color: var(--ink); font-weight: 500; }
+.pronunc {
+  font-size: 13px; color: var(--ink-faint);
+  font-style: italic; margin-bottom: 2rem; display: block;
+}
+.links-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.8rem; }
+.email-block { font-size: 14px; color: var(--ink-muted); line-height: 2.1; }
+.email-block a {
+  color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border-color 0.2s;
+}
+.email-block a:hover { border-color: var(--accent); }
+
+/* sidebar */
+.sidebar-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: 2px; padding: 1.8rem;
+  position: sticky; top: 72px;
+}
+.sidebar-card h3 {
+  font-family: var(--serif); font-size: 12px; font-weight: 400;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 1.1rem;
+}
+.affil-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin-bottom: 1.1rem; font-size: 13.5px;
+  color: var(--ink-muted); line-height: 1.45;
+}
+.affil-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); margin-top: 5px; flex-shrink: 0;
+}
+.affil-item strong { display: block; color: var(--ink); font-weight: 500; font-size: 13px; }
+.sidebar-hr { border: none; border-top: 1px solid var(--rule); margin: 1.2rem 0; }
+
+/* themes */
+.section { max-width: 1000px; margin: 0 auto; padding: 0 2rem 5rem; }
+.section-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-top: 2px solid var(--ink); padding-top: 1.2rem; margin-bottom: 2.5rem;
+}
+.section-header h2 {
+  font-family: var(--serif); font-size: 1rem; font-weight: 400;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.section-header a {
+  font-size: 13px; color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border-color 0.2s;
+}
+.section-header a:hover { border-color: var(--accent); }
+.themes-row {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); margin-bottom: 4rem;
+}
+.theme-cell { background: var(--paper); padding: 1.6rem; }
+.theme-num {
+  font-family: var(--serif); font-size: 1.9rem;
+  color: var(--rule); display: block; margin-bottom: 0.4rem;
+}
+.theme-title {
+  font-family: var(--serif); font-size: 1rem;
+  font-weight: 400; color: var(--ink); margin-bottom: 0.5rem;
+}
+.theme-desc { font-size: 13px; line-height: 1.6; color: var(--ink-muted); }
+
+/* featured papers grid */
+.papers-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+}
+.paper-card {
+  background: var(--paper); padding: 1.8rem;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  transition: background 0.18s; text-decoration: none;
+}
+.paper-card:hover { background: var(--paper-warm); }
+.paper-card .paper-badge { margin-bottom: 0; }
+.paper-card .paper-title { font-size: 1rem; }
+.paper-card .paper-meta { font-size: 13px; color: var(--ink-faint); font-style: italic; margin: 0; }
+.paper-card .paper-abstract-short { font-size: 13px; line-height: 1.65; color: var(--ink-muted); }
+.paper-full { grid-column: 1 / -1; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-text { animation: fadeUp 0.55s ease both; }
+.sidebar-card { animation: fadeUp 0.55s 0.12s ease both; }
+
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding: 3rem 1.25rem 3rem; gap: 2.5rem; }
+  .sidebar-card { position: static; }
+  .papers-grid { grid-template-columns: 1fr; }
+  .themes-row { grid-template-columns: 1fr; }
+  .paper-full { grid-column: 1; }
+  .section { padding: 0 1.25rem 4rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Bruno Pantaleão</a>
+  <ul class="nav-links">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="ongoing.html">On-going</a></li>
+    <li><a href="policy.html">Policy</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Postdoctoral Researcher · FGV Analytics</p>
+    <h1>Crime, violence &amp;<br><em>public policy</em><br>in Latin America</h1>
+    <p class="hero-bio">
+      I study the causes and consequences of <strong>crime and violence</strong> using quantitative methods, with a focus on Brazil. My work examines criminal governance, police reform, and how illegal markets shape economic development in peripheral communities.
+    </p>
+    <span class="pronunc">Pantaleão — the [ã] is nasal. Call me Panta if you prefer.</span>
+    <div class="links-row">
+      <a class="link-pill" href="https://scholar.google.fr/citations?user=aN9Eio4AAAAJ&hl=en" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l-2-2m0 0l-2-2m2 2l2-2m-2 2v6M4 6h16M4 6l8 6 8-6"/></svg>
+        Google Scholar
+      </a>
+      <a class="link-pill" href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=6332960" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
+        SSRN
+      </a>
+      <a class="link-pill" href="https://orcid.org/0000-0002-9605-2483" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 7v10M12 7c2.5 0 4 1.5 4 5s-1.5 5-4 5"/></svg>
+        ORCID
+      </a>
+      <a class="link-pill" href="http://lattes.cnpq.br/6629468562676391" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+        Lattes
+      </a>
+      <a class="link-pill" href="https://analytics.fgv.br/node/213" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        FGV Analytics
+      </a>
+    </div>
+    <div class="email-block">
+      <a href="mailto:bruno.oliveira@sciencespo.fr">bruno.oliveira@sciencespo.fr</a><br>
+      <a href="mailto:bruno.pantaleao@fgv.br">bruno.pantaleao@fgv.br</a>
+    </div>
+  </div>
+
+  <aside class="sidebar-card">
+    <h3>Position</h3>
+    <div class="affil-item">
+      <div class="affil-dot"></div>
+      <div><strong>FAPESP Postdoctoral Fellow</strong>FGV Analytics — Public Security Policies Research Center</div>
+    </div>
+    <div class="affil-item">
+      <div class="affil-dot" style="background:var(--ink-faint)"></div>
+      <div><strong>PhD, FGV-EAESP</strong>São Paulo School of Business Administration, 2024</div>
+    </div>
+    <hr class="sidebar-hr">
+    <h3>Selected Journals</h3>
+    <div class="affil-item">
+      <div class="affil-dot" style="background:var(--accent-light)"></div>
+      <div>American Political Science Review</div>
+    </div>
+    <div class="affil-item">
+      <div class="affil-dot" style="background:var(--accent-light)"></div>
+      <div>Journal of Development Economics</div>
+    </div>
+    <div class="affil-item">
+      <div class="affil-dot" style="background:var(--accent-light)"></div>
+      <div>World Development</div>
+    </div>
+    <div class="affil-item">
+      <div class="affil-dot" style="background:var(--accent-light)"></div>
+      <div>Journal of Quantitative Criminology</div>
+    </div>
+    <div class="affil-item">
+      <div class="affil-dot" style="background:var(--accent-light)"></div>
+      <div>Latin American Politics and Society</div>
+    </div>
+  </aside>
+</section>
+
+<section class="section" id="themes">
+  <div class="section-header"><h2>Research themes</h2></div>
+  <div class="themes-row">
+    <div class="theme-cell">
+      <span class="theme-num">01</span>
+      <p class="theme-title">Criminal Governance</p>
+      <p class="theme-desc">How organized crime groups create order and economic consequences in communities underserved by the state.</p>
+    </div>
+    <div class="theme-cell">
+      <span class="theme-num">02</span>
+      <p class="theme-title">Police Reform &amp; Violence</p>
+      <p class="theme-desc">Evaluating data-driven policing, police autonomy, and institutional reform on homicide and public security.</p>
+    </div>
+    <div class="theme-cell">
+      <span class="theme-num">03</span>
+      <p class="theme-title">Drug Policy &amp; Illegal Markets</p>
+      <p class="theme-desc">Cross-border spillovers of cannabis regulation, drug seizures, and narcotrafficking in South America.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="section-header">
+    <h2>Recent publications</h2>
+    <a href="research.html">View all →</a>
+  </div>
+  <div class="papers-grid">
+    <a class="paper-card paper-full" href="https://doi.org/10.1017/S0003055425101354" target="_blank">
+      <span class="paper-badge">★ Job Market Paper · American Political Science Review</span>
+      <p class="paper-title">Peace Dividends: Criminal Governance, Rational Violence, and Economic Development</p>
+      <p class="paper-abstract-short">Shows that a stable, hegemonic drug-trafficking organization generates measurable improvements in local employment and firm creation in peripheral Brazilian neighborhoods by providing predictable governance where the state is absent.</p>
+      <span class="paper-meta">APSR · 2025</span>
+    </a>
+    <a class="paper-card" href="https://doi.org/10.1016/j.worlddev.2026.107345" target="_blank">
+      <span class="paper-badge">Forthcoming · World Development</span>
+      <p class="paper-title">Improving Police Management Boosts Economic Development: Evidence from Brazil</p>
+      <span class="paper-meta">World Development · 2026</span>
+    </a>
+    <a class="paper-card" href="https://doi.org/10.1016/j.jdeveco.2025.103603" target="_blank">
+      <span class="paper-badge">Journal of Development Economics</span>
+      <p class="paper-title">Police Autonomy, Data-Driven Strategies, and Violence: Evidence from Brazil's Policing Reform</p>
+      <span class="paper-meta">With Kopittke &amp; Parfitt · 2025</span>
+    </a>
+    <a class="paper-card" href="https://doi.org/10.1017/lap.2025.10026" target="_blank">
+      <span class="paper-badge">Latin American Politics and Society</span>
+      <p class="paper-title">When Elections Empower Crime: Political Protection and Milícia Expansion in Rio de Janeiro</p>
+      <span class="paper-meta">With Montini · 2025</span>
+    </a>
+  </div>
+</section>
+
+<footer>Bruno Pantaleão · FGV Analytics, São Paulo · <a href="mailto:bruno.pantaleao@fgv.br" style="color:var(--ink-faint);text-decoration:none;">bruno.pantaleao@fgv.br</a></footer>
+
+</body>
+</html>
